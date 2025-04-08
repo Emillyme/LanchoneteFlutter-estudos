@@ -33,7 +33,7 @@ class Detalhespage extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: 24, vertical: 150),
             decoration: BoxDecoration(
               color: Colors.white,
-              borderRadius: BorderRadius.circular(18),
+              borderRadius: BorderRadius.circular(17),
             ),
 
           ),
