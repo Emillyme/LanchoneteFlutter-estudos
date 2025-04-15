@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:lanchoneteapp/carrinho.dart';
 import 'package:lanchoneteapp/detalhesPage.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MeuApp());
+  runApp(
+    ChangeNotifierProvider(
+    create: (_) => CarrinhoModel(),
+    child: MeuApp()
+    ),
+  );
 }
 
 class MeuApp extends StatelessWidget {
@@ -37,6 +44,16 @@ class MyHomePage extends StatelessWidget {
                         titulo: 'Hamburger',
                         cor1: const Color.fromARGB(255, 113, 164, 221),
                         cor2: const Color.fromARGB(255, 14, 29, 112),
+                        icon: Image.asset('assets/images/hamburger.png'),
+                        subtitulo: 'X-Salada',
+                        calorias: '500',
+                        preco: '18',
+                        exercicios: [
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon1.png'), label: '100 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon2.png'), label: '140 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon3.png'), label: '90 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon4.png'), label: '130 min'),
+                        ],
                       ),
                     ),
                   );
@@ -57,6 +74,16 @@ class MyHomePage extends StatelessWidget {
                         titulo: 'Pizza',
                         cor1: const Color.fromARGB(255, 196, 113, 221),
                         cor2: const Color.fromARGB(255, 53, 20, 131),
+                        icon: Image.asset('assets/images/pizza.png'),
+                        subtitulo: 'Pizza de peperonni',
+                        calorias: '700',
+                        preco: '60',
+                        exercicios: [
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon1.png'), label: '61 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon2.png'), label: '120 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon3.png'), label: '70 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon4.png'), label: '100 min'),
+                        ],
                       ),
                     ),
                   );
@@ -77,6 +104,16 @@ class MyHomePage extends StatelessWidget {
                         cor1: const Color.fromARGB(255, 94, 199, 199),
                         cor2: const Color.fromARGB(255, 14, 76, 105),
                         titulo: 'Donuts',
+                        icon: Image.asset('assets/images/donut.png'),
+                        subtitulo: 'Donuts de morango',
+                        calorias: '302',
+                        preco: '10',
+                        exercicios: [
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon1.png'), label: '80 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon2.png'), label: '120 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon3.png'), label: '70 min'),
+                          ExercicioItem(imagem: AssetImage('assets/images/icons/icon4.png'), label: '100 min'),
+                        ],
                       ),
                     ),
                   );
